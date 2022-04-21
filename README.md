@@ -10,7 +10,7 @@ an open-source (MIT) neural machine translation system. It is designed to be res
 저는 OpenNMT(RNN)모델에 BERT가 생성한 embedding정보를 데이터 이해 증진방법을 위해 사용하여 모델을 학습했을 때, 
 모델의 성능의 변화를 확인하고자 하였습니다. 이 git내용은 그 방법에 대한 설명서이므로 참고하여 사용해주시기 바랍니다. 
 
-procject date : 2018.12 ~ 2019.09
+procject date : 2019.04 ~ 2019.09
 
 <center style="padding: 40px"><img width="70%" src="feature_model.png" /></center>
 
