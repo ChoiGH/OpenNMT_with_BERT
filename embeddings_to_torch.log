@@ -1,0 +1,87 @@
+[2019-05-15 16:33:48,304 INFO] From: ../data/demo/baselie_en2ko.demo.vocab.pt
+[2019-05-15 16:33:48,305 INFO] 	* source vocab: 12356 words
+[2019-05-15 16:33:48,305 INFO] 	* target vocab: 17292 words
+[2019-05-15 16:34:09,424 INFO] From: ../data/demo/baselie_en2ko.demo.vocab.pt
+[2019-05-15 16:34:09,424 INFO] 	* source vocab: 12356 words
+[2019-05-15 16:34:09,425 INFO] 	* target vocab: 17292 words
+[2019-05-15 16:34:09,428 INFO] Reading encoder and decoder embeddings from ../bert/test/output.json1
+[2019-05-15 16:34:09,439 INFO] 	Found 10 total vectors in file
+[2019-05-15 16:34:09,439 INFO] After filtering to vectors in vocab:
+[2019-05-15 16:34:09,440 INFO] 	* enc: 0 match, 12356 missing, (0.00%)
+[2019-05-15 16:34:09,442 INFO] 	* dec: 0 match, 17292 missing, (0.00%)
+[2019-05-15 16:34:09,442 INFO] 
+Saving embedding as:
+	* enc: ../bert/test/test.output.json1.embeddings.enc.pt
+	* dec: ../bert/test/test.output.json1.embeddings.dec.pt
+[2019-05-15 16:34:43,092 INFO] From: ../data/demo/baselie_en2ko.demo.vocab.pt
+[2019-05-15 16:34:43,092 INFO] 	* source vocab: 12356 words
+[2019-05-15 16:34:43,092 INFO] 	* target vocab: 17292 words
+[2019-05-15 16:34:43,095 INFO] Reading encoder and decoder embeddings from ../bert/test/output.json1
+[2019-05-15 16:34:43,107 INFO] 	Found 10 total vectors in file
+[2019-05-15 16:34:43,107 INFO] After filtering to vectors in vocab:
+[2019-05-15 16:34:43,108 INFO] 	* enc: 0 match, 12356 missing, (0.00%)
+[2019-05-15 16:34:43,109 INFO] 	* dec: 0 match, 17292 missing, (0.00%)
+[2019-05-15 16:34:43,110 INFO] 
+Saving embedding as:
+	* enc: ../bert/test/test.output.json1.embeddings.enc.pt
+	* dec: ../bert/test/test.output.json1.embeddings.dec.pt
+[2019-05-15 16:45:40,221 INFO] From: ../data/demo/baselie_en2ko.demo.vocab.pt
+[2019-05-15 16:45:40,221 INFO] 	* source vocab: 12356 words
+[2019-05-15 16:45:40,221 INFO] 	* target vocab: 17292 words
+[2019-05-15 16:45:40,221 INFO] Reading encoder embeddings from ../bert/test/en_input.txt.output.json1
+[2019-05-15 16:45:40,232 INFO] 	Found 10 total vectors in file.
+[2019-05-15 16:45:40,232 INFO] Reading decoder embeddings from ../bert/test/ko_input.txt.output.json1
+[2019-05-15 16:45:40,240 INFO] 	Found 10 total vectors in file
+[2019-05-15 16:45:40,240 INFO] After filtering to vectors in vocab:
+[2019-05-15 16:45:40,241 INFO] 	* enc: 0 match, 12356 missing, (0.00%)
+[2019-05-15 16:45:40,243 INFO] 	* dec: 0 match, 17292 missing, (0.00%)
+[2019-05-15 16:45:40,243 INFO] 
+Saving embedding as:
+	* enc: ../bert/test/test.en2ko.output.json1.embeddings.enc.pt
+	* dec: ../bert/test/test.en2ko.output.json1.embeddings.dec.pt
+[2019-05-15 16:57:52,488 INFO] From: ../data/demo/baselie_en2ko.demo.vocab.pt
+[2019-05-15 16:57:52,488 INFO] 	* source vocab: 12356 words
+[2019-05-15 16:57:52,488 INFO] 	* target vocab: 17292 words
+[2019-05-15 16:57:52,488 INFO] Reading encoder embeddings from ../bert/test/en_input.txt.output.json1
+[2019-05-15 16:57:52,591 INFO] 	Found 100 total vectors in file.
+[2019-05-15 16:57:52,592 INFO] Reading decoder embeddings from ../bert/test/ko_input.txt.output.json1
+[2019-05-15 16:57:52,662 INFO] 	Found 100 total vectors in file
+[2019-05-15 16:57:52,662 INFO] After filtering to vectors in vocab:
+[2019-05-15 16:57:52,663 INFO] 	* enc: 0 match, 12356 missing, (0.00%)
+[2019-05-15 16:57:52,664 INFO] 	* dec: 0 match, 17292 missing, (0.00%)
+[2019-05-15 16:57:52,665 INFO] 
+Saving embedding as:
+	* enc: ../bert/test/test.en2ko.output.json1.embeddings.enc.pt
+	* dec: ../bert/test/test.en2ko.output.json1.embeddings.dec.pt
+[2019-05-15 19:16:36,937 INFO] From: ../data/demo/baselie_en2ko.demo.vocab.pt
+[2019-05-15 19:16:36,938 INFO] 	* source vocab: 12356 words
+[2019-05-15 19:16:36,938 INFO] 	* target vocab: 17292 words
+[2019-05-15 19:16:36,938 INFO] Reading encoder embeddings from ../bert/test/en_input.txt.output.json1
+[2019-05-15 19:16:37,264 INFO] 	Found 2236 total vectors in file.
+[2019-05-15 19:16:37,264 INFO] Reading decoder embeddings from ../bert/test/ko_input.txt.output.json1
+[2019-05-15 19:16:37,372 INFO] 	Found 1609 total vectors in file
+[2019-05-15 19:16:37,373 INFO] After filtering to vectors in vocab:
+[2019-05-15 19:16:37,374 INFO] 	* enc: 653 match, 11703 missing, (5.28%)
+[2019-05-15 19:16:37,376 INFO] 	* dec: 141 match, 17151 missing, (0.82%)
+[2019-05-15 19:16:37,376 INFO] 
+Saving embedding as:
+	* enc: ../bert/test/test.en2ko.output.json1.embeddings.enc.pt
+	* dec: ../bert/test/test.en2ko.output.json1.embeddings.dec.pt
+[2019-05-15 19:16:37,599 INFO] 
+Done.
+[2019-05-17 18:01:35,065 INFO] From: ../data/demo/baselie_en2ko.demo.vocab.pt
+[2019-05-17 18:01:35,070 INFO] 	* source vocab: 12356 words
+[2019-05-17 18:01:35,070 INFO] 	* target vocab: 17292 words
+[2019-05-17 18:01:35,070 INFO] Reading encoder embeddings from ../data/bert_embedding/bert_tokenizer/en.train.output.json1
+[2019-05-17 18:15:13,494 INFO] 	Found 5763423 total vectors in file.
+[2019-05-17 18:15:13,494 INFO] Reading decoder embeddings from ../data/bert_embedding/bert_tokenizer/ko.train.output.json1.sub
+[2019-05-17 18:28:07,029 INFO] 	Found 7298889 total vectors in file
+[2019-05-17 18:28:07,029 INFO] After filtering to vectors in vocab:
+[2019-05-17 18:28:07,031 INFO] 	* enc: 3898 match, 8458 missing, (31.55%)
+[2019-05-17 18:28:07,033 INFO] 	* dec: 588 match, 16704 missing, (3.40%)
+[2019-05-17 18:28:07,033 INFO] 
+Saving embedding as:
+	* enc: ../data/bert_embedding/model/bert_emb_25_en2ko.convert.openNMT.glove_sytle.embedding.enc.pt
+	* dec: ../data/bert_embedding/model/bert_emb_25_en2ko.convert.openNMT.glove_sytle.embedding.dec.pt
+[2019-05-17 18:28:07,647 INFO] 
+Done.
