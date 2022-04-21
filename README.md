@@ -15,17 +15,6 @@ Before raising an issue, make sure you read the requirements and the documentati
 
 Unless there is a bug, please use the [Forum](http://forum.opennmt.net) or [Gitter](https://gitter.im/OpenNMT/OpenNMT-py) to ask questions.
 
-
-Table of Contents
-=================
-  * [Full Documentation](http://opennmt.net/OpenNMT-py/)
-  * [Requirements](#requirements)
-  * [Features](#features)
-  * [Quickstart](#quickstart)
-  * [Run on FloydHub](#run-on-floydhub)
-  * [Acknowledgements](#acknowledgements)
-  * [Citation](#citation)
-
 ## Requirements
 
 All dependencies can be installed via:
@@ -86,10 +75,10 @@ After running the preprocessing, the following files are generated:
 
 Internally the system never touches the words themselves, but uses these indices.
 
-### Step 2: Train the model
+### Step 2: Train the model with using BERT
 
 ```bash
-python train.py -data data/demo -save_model demo-model
+python train.py -data data/demo -save_model demo-model -pre_word_vecs_enc file1.pt -pre_word_vecs_dec file2.pt
 ```
 
 The main train command is quite simple. Minimally it takes a data file
@@ -110,6 +99,7 @@ Now you have a model which you can use to predict on new data. We do this by run
 
 !!! note "Note"
     The predictions are going to be quite terrible, as the demo dataset is small. Try running on some larger datasets! For example you can download millions of parallel sentences for [translation](http://www.statmt.org/wmt16/translation-task.html) or [summarization](https://github.com/harvardnlp/sent-summary).
+    
 
 ## Alternative: Run on FloydHub
 
@@ -128,43 +118,3 @@ The following pretrained models can be downloaded and used with translate.py.
 
 http://opennmt.net/Models-py/
 
-## Acknowledgements
-
-OpenNMT-py is run as a collaborative open-source project.
-The original code was written by [Adam Lerer](http://github.com/adamlerer) (NYC) to reproduce OpenNMT-Lua using Pytorch.
-
-Major contributors are:
-[Sasha Rush](https://github.com/srush) (Cambridge, MA)
-[Vincent Nguyen](https://github.com/vince62s) (Ubiqus)
-[Ben Peters](http://github.com/bpopeters) (Lisbon)
-[Sebastian Gehrmann](https://github.com/sebastianGehrmann) (Harvard NLP)
-[Yuntian Deng](https://github.com/da03) (Harvard NLP)
-[Guillaume Klein](https://github.com/guillaumekln) (Systran)
-[Paul Tardy](https://github.com/pltrdy) (Ubiqus / Lium)
-[François Hernandez](https://github.com/francoishernandez) (Ubiqus)
-[Jianyu Zhan](http://github.com/jianyuzhan) (Shanghai)
-[Dylan Flaute](http://github.com/flauted (University of Dayton)
-and more !
-
-OpentNMT-py belongs to the OpenNMT project along with OpenNMT-Lua and OpenNMT-tf.
-
-## Citation
-
-[OpenNMT: Neural Machine Translation Toolkit](https://arxiv.org/pdf/1805.11462)
-
-[OpenNMT technical report](https://doi.org/10.18653/v1/P17-4012)
-
-```
-@inproceedings{opennmt,
-  author    = {Guillaume Klein and
-               Yoon Kim and
-               Yuntian Deng and
-               Jean Senellart and
-               Alexander M. Rush},
-  title     = {Open{NMT}: Open-Source Toolkit for Neural Machine Translation},
-  booktitle = {Proc. ACL},
-  year      = {2017},
-  url       = {https://doi.org/10.18653/v1/P17-4012},
-  doi       = {10.18653/v1/P17-4012}
-}
-```
