@@ -7,7 +7,7 @@ This is a [Pytorch](https://github.com/pytorch/pytorch)
 port of [OpenNMT](https://github.com/OpenNMT/OpenNMT),
 an open-source (MIT) neural machine translation system. It is designed to be research friendly to try out new ideas in translation, summary, image-to-text, morphology, and many other domains. Some companies have proven the code to be production ready.
 
-저는 OpenNMT(RNN)모델에 BERT가 생성한 embedding정보를 데이터 이해 증진방법을 위해 사용하여 모델을 학습했을 때, 
+저는 OpenNMT(RNN)모델에 BERT가 생성한 embedding정보를 데이터 이해 증진을 위한 방법으로 사용하여 모델을 학습했을 때, 
 모델의 성능의 변화를 확인하고자 하였습니다. 이 git내용은 그 방법에 대한 설명서이므로 참고하여 사용해주시기 바랍니다. 
 
 procject date : 2019.04 ~ 2019.09
