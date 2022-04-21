@@ -9,7 +9,7 @@ an open-source (MIT) neural machine translation system. It is designed to be res
 
 We love contributions. Please consult the Issues page for any [Contributions Welcome](https://github.com/OpenNMT/OpenNMT-py/issues?q=is%3Aissue+is%3Aopen+label%3A%22contributions+welcome%22) tagged post. 
 
-<center style="padding: 40px"><img width="70%" src="http://opennmt.github.io/simple-attn.png" /></center>
+<center style="padding: 40px"><img width="70%" src="feature_model.png" /></center>
 
 Before raising an issue, make sure you read the requirements and the documentation examples.
 
