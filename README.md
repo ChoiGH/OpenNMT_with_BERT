@@ -88,6 +88,7 @@ If you want to train on GPU, you need to set, as an example:
 CUDA_VISIBLE_DEVICES=1,3
 `-world_size 2 -gpu_ranks 0 1` to use (say) GPU 1 and 3 on this node only.
 To know more about distributed training on single or multi nodes, read the FAQ section.
+*위에서 생성한 embedding 파일들 (.pt)를 옵션에 추가만 하면됩니다.*
 
 ### Step 3: Translate
 
