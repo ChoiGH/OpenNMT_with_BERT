@@ -46,11 +46,13 @@ BERT tokenize-  Source :  [CLS] I ##mpo ##rt Data from ME ##D Files [SEP] -  Tar
 
 ◆언어옵션
 1) 영어 – en 
-2) 영어는 꼭 en으로 명시해줘야 영어전용 BERT(google)모델로 할당
-3) 한국어
-3.1) ko – BERT(google) 모델을 사용할 때
-3.2) kobert – korbert(ETRI) 모델을 사용할 때
-4)그 외
+>>> 영어는 꼭 en으로 명시해줘야 영어전용 BERT(google)모델로 할당
+
+2) 한국어
+>>> ko – BERT(google) 모델을 사용할 때
+>>> kobert – korbert(ETRI) 모델을 사용할 때
+
+3)그 외
 en, ko 그리고 kobert가 아닌 아무 문자나 넣으셔도 알아서 동작 [이유 : 다른 외국어들은 모두 BERT(google)의 multi_cased 모델을 사용하기 때문]
 ```
 
