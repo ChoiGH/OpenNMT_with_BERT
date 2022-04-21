@@ -143,7 +143,7 @@ Now you have a model which you can use to predict on new data. We do this by run
 4) 2019_lecture_2290문장
 5) 2008_IT_web_2000문장
 
-◆ BERT embedding을 학습에 사용한 NMT모델의 성능이 더 우수함을 증명
+◆ BERT embedding을 학습에 사용한 NMT모델(RNN)의 성능이 더 우수함을 증명
 
 ◆ Two sequence sentence embedding은 BERT의 입력으로 두개의 문장을 붙힌 형태를 사용했을 때 추출된 embedding을 사용했다는 의미
 
