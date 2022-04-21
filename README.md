@@ -47,6 +47,20 @@ Note that we currently only support PyTorch 1.0.0
 
 [Full Documentation](http://opennmt.net/OpenNMT-py/)
 
+### Make embedding file for training
+--Step 1 : tokenize
+bert_tokenizer.py
+```bash
+python bert_tokenize.py [tokenize option] [language option] [input file]
+```
+결과 : input 파일의 bert tokenize된 형태의 파일 생성
+
+```bash
+Tokenize 예시
+원문- Source : Import Data from MED Files- Target : MED 파일에서 데이터 가져오기
+BERT-  Source :  [CLS] I ##mpo ##rt Data from ME ##D Files [SEP]-  Target : [CLS] ME ##D 파 ##일 ##에서 데 ##이터 가 ##져 ##오 ##기 [SEP]
+```
+
 
 ### Step 1: Preprocess the data
 
@@ -88,7 +102,8 @@ If you want to train on GPU, you need to set, as an example:
 CUDA_VISIBLE_DEVICES=1,3
 `-world_size 2 -gpu_ranks 0 1` to use (say) GPU 1 and 3 on this node only.
 To know more about distributed training on single or multi nodes, read the FAQ section.
-*위에서 생성한 embedding 파일들 (.pt)를 옵션에 추가만 하면됩니다.*
+
+★위에서 생성한 embedding 파일들 (.pt)를 옵션에 추가만 하면됩니다.
 
 ### Step 3: Translate
 
