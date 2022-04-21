@@ -26,7 +26,7 @@ pip install -r requirements.txt
 Note that we currently only support PyTorch 1.0.0
 
 ### Make embedding file for training
---Step 1 : tokenize
+▶Step 1 : tokenize
 bert_tokenizer.py
 ```bash
 python bert_tokenize.py [tokenize option] [language option] [input file]
@@ -55,6 +55,27 @@ BERT tokenize-  Source :  [CLS] I ##mpo ##rt Data from ME ##D Files [SEP] -  Tar
 3)그 외
 en, ko 그리고 kobert가 아닌 아무 문자나 넣으셔도 알아서 동작 [이유 : 다른 외국어들은 모두 BERT(google)의 multi_cased 모델을 사용하기 때문]
 ```
+▶Step 2 : Make embedding file
+embeddings_to_torch2.py
+```bash
+python embeddings_to_torch2.py -src_lang [language option] \
+-tgt_lang [language option] -src_file [file_name1] -tgt_file [file_name2] \
+-vocab_data [vocap.pt file] output [file_name3]
+```
+```bash
+◆언어옵션
+1) 영어 – en 
+>>> 영어는 꼭 en으로 명시해줘야 영어전용 BERT(google)모델로 할당
+2) 한국어
+>>> ko – BERT(google) 모델을 사용할 때
+>>> kobert – korbert(ETRI) 모델을 사용할 때
+3) 그 외
+>>>en, ko 그리고 kobert가 아닌 아무 문자나 넣으셔도 알아서 동작 [이유 : 다른 외국어들은 모두 BERT(google)의 multi_cased 모델을 사용하기 때문]
+
+# 입력파일은 원문 형태여야 합니다. [Not tokenized]
+◆ 출력
+>>> 출력파일.enc.pt,   출력파일.dec.pt 파일 생성
+````
 
 ### Step 1: Preprocess the data
 
