@@ -39,12 +39,12 @@ Tokenize 예시
 BERT tokenize-  Source :  [CLS] I ##mpo ##rt Data from ME ##D Files [SEP] -  Target : [CLS] ME ##D 파 ##일 ##에서 데 ##이터 가 ##져 ##오 ##기 [SEP]
 ```
 ```bash
-◆Tokenize옵션
+◆ Tokenize옵션 [tokenize option]
 1) bert_base_cased  (영어에서만 사용)
 2) bert_base_multi_cased (영어를 제외한 외국어)
 3) kobert_base_cased_bpe (한국어에서만 사용)
 
-◆언어옵션
+◆ 언어옵션 [language option]
 1) 영어 – en 
 >>> 영어는 꼭 en으로 명시해줘야 영어전용 BERT(google)모델로 할당
 
@@ -56,14 +56,17 @@ BERT tokenize-  Source :  [CLS] I ##mpo ##rt Data from ME ##D Files [SEP] -  Tar
 en, ko 그리고 kobert가 아닌 아무 문자나 넣으셔도 알아서 동작 [이유 : 다른 외국어들은 모두 BERT(google)의 multi_cased 모델을 사용하기 때문]
 ```
 ▶Step 2 : Make embedding file
-embeddings_to_torch2.py
+embeddings_to_torch2.py  
+*주의* 
+71~97줄에 해당하는 부분의 코드에서 BERT와 korBERT의 경로를 본인이 사용하는 환경에 맞게 
 ```bash
 python embeddings_to_torch2.py -src_lang [language option] \
 -tgt_lang [language option] -src_file [file_name1] -tgt_file [file_name2] \
 -vocab_data [vocap.pt file] output [file_name3]
 ```
+vocab.pt 파일은 preprocess.py를 통해 생성됩니다. 
 ```bash
-◆언어옵션
+◆ 언어옵션 [language option]
 1) 영어 – en 
 >>> 영어는 꼭 en으로 명시해줘야 영어전용 BERT(google)모델로 할당
 2) 한국어
@@ -76,7 +79,7 @@ python embeddings_to_torch2.py -src_lang [language option] \
 ◆ 출력
 >>> 출력파일.enc.pt,   출력파일.dec.pt 파일 생성
 ````
-
+### Model train
 ### Step 1: Preprocess the data
 
 ```bash
@@ -131,21 +134,13 @@ Now you have a model which you can use to predict on new data. We do this by run
 !!! note "Note"
     The predictions are going to be quite terrible, as the demo dataset is small. Try running on some larger datasets! For example you can download millions of parallel sentences for [translation](http://www.statmt.org/wmt16/translation-task.html) or [summarization](https://github.com/harvardnlp/sent-summary).
     
+### Result
+영어-한국어 평가
+▶다양한 도메인의 데이터 사용
+1) 2007_paper_1000문장
+2) 2009_biz_3000문장
+3) 2009_trip_2000문장, 2009_trip2_4000문장
+4) 2019_lecture_2290문장
+5) 2008_IT_web_2000문장
 
-## Alternative: Run on FloydHub
-
-[![Run on FloydHub](https://static.floydhub.com/button/button.svg)](https://floydhub.com/run?template=https://github.com/OpenNMT/OpenNMT-py)
-
-Click this button to open a Workspace on [FloydHub](https://www.floydhub.com/?utm_medium=readme&utm_source=opennmt-py&utm_campaign=jul_2018) for training/testing your code.
-
-
-## Pretrained embeddings (e.g. GloVe)
-
-Please see the FAQ: [How to use GloVe pre-trained embeddings in OpenNMT-py](http://opennmt.net/OpenNMT-py/FAQ.html#how-do-i-use-pretrained-embeddings-e-g-glove)
-
-## Pretrained Models
-
-The following pretrained models can be downloaded and used with translate.py.
-
-http://opennmt.net/Models-py/
-
+<center style="padding: 40px"><img width="70%" src="performance.png" /></center>
