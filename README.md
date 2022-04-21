@@ -25,28 +25,6 @@ pip install -r requirements.txt
 
 Note that we currently only support PyTorch 1.0.0
 
-## Features
-
-- [data preprocessing](http://opennmt.net/OpenNMT-py/options/preprocess.html)
-- [Inference (translation) with batching and beam search](http://opennmt.net/OpenNMT-py/options/translate.html)
-- [Multiple source and target RNN (lstm/gru) types and attention (dotprod/mlp) types](http://opennmt.net/OpenNMT-py/options/train.html#model-encoder-decoder)
-- [TensorBoard](http://opennmt.net/OpenNMT-py/options/train.html#logging)
-- [Source word features](http://opennmt.net/OpenNMT-py/options/train.html#model-embeddings)
-- [Pretrained Embeddings](http://opennmt.net/OpenNMT-py/FAQ.html#how-do-i-use-pretrained-embeddings-e-g-glove)
-- [Copy and Coverage Attention](http://opennmt.net/OpenNMT-py/options/train.html#model-attention)
-- [Image-to-text processing](http://opennmt.net/OpenNMT-py/im2text.html)
-- [Speech-to-text processing](http://opennmt.net/OpenNMT-py/speech2text.html)
-- ["Attention is all you need"](http://opennmt.net/OpenNMT-py/FAQ.html#how-do-i-use-the-transformer-model)
-- [Multi-GPU](http://opennmt.net/OpenNMT-py/FAQ.html##do-you-support-multi-gpu)
-- Inference time loss functions.
-- [Conv2Conv convolution model]
-- SRU "RNNs faster than CNN" paper
-- FP16 training (mixed-precision with Apex)
-
-## Quickstart
-
-[Full Documentation](http://opennmt.net/OpenNMT-py/)
-
 ### Make embedding file for training
 --Step 1 : tokenize
 bert_tokenizer.py
@@ -57,10 +35,25 @@ python bert_tokenize.py [tokenize option] [language option] [input file]
 
 ```bash
 Tokenize 예시
-원문- Source : Import Data from MED Files- Target : MED 파일에서 데이터 가져오기
-BERT-  Source :  [CLS] I ##mpo ##rt Data from ME ##D Files [SEP]-  Target : [CLS] ME ##D 파 ##일 ##에서 데 ##이터 가 ##져 ##오 ##기 [SEP]
+원문 - Source : Import Data from MED Files - Target : MED 파일에서 데이터 가져오기
+BERT tokenize-  Source :  [CLS] I ##mpo ##rt Data from ME ##D Files [SEP] -  Target : [CLS] ME ##D 파 ##일 ##에서 데 ##이터 가 ##져 ##오 ##기 [SEP]
 ```
+```bash
+Tokenize옵션
+bert_base_cased  (영어에서만 사용)
+bert_base_multi_cased (영어를 제외한 외국어)
+kobert_base_cased_bpe (한국어에서만 사용)
 
+언어옵션
+영어 – en 
+영어는 꼭 en으로 명시해줘야 영어전용 BERT(google)모델로 할당
+한국어
+ko – BERT(google) 모델을 사용할 때
+kobert – korbert(ETRI) 모델을 사용할 때
+그 외
+en, ko 그리고 kobert가 아닌 아무 문자나 넣으셔도 알아서 동작
+이유 : 다른 외국어들은 모두 BERT(google)의 multi_cased 모델을 사용하기 때문
+```
 
 ### Step 1: Preprocess the data
 
